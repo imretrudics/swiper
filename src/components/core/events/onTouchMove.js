@@ -15,7 +15,7 @@ export default function onTouchMove(event) {
     }
     return;
   }
-  if (data.isTouchEvent && e.type !== 'touchmove') return;
+  if (data.isTouchEvent && e.type === 'mousemove') return;
   const targetTouch =
     e.type === 'touchmove' && e.targetTouches && (e.targetTouches[0] || e.changedTouches[0]);
   const pageX = e.type === 'touchmove' ? targetTouch.pageX : e.pageX;
